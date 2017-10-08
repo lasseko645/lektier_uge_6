@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class MilesConverter {
+    public static void main(String[] args) {
+
+        // fist i start by declaring my variable in the datafeild ps.ill be making both this one and one using the for loops aswell, but since that one was made in class it seems less important for repetitions sake XD
+
+        int kilometer = 0;        // this one is the kilometer track
+        double miles = 0;        // this one is the one keeping track of the amount of miles
+
+
+        Scanner input = new Scanner(System.in);         // i declare my scanner object
+
+        System.out.print("\n how many kilometers are we in need of converting: ");        // promt for the user to makes use of
+
+        int user = input.nextInt();     // we make the promt usable
+
+        System.out.print("\nkilometers      miles");      // the first printline before the loop witch will just state some simple gui
+
+
+        while (kilometer < user){       // we start a while loop that sais that as long as the variable kilometer is smaller than the interger value entered by the user
+            String spacing = "";        // this string is used for spacing
+            kilometer = kilometer + 1;      // here we make the variable kilometer go up by 1 every loop
+            miles = kilometer * 1.609;      // here we make the conversion happen
+
+            if (kilometer < 10) {        //this was my solution to the spacing issue
+
+                // this ended up not working: System.out.println(" ");    // here i make it so that if the variable is a single digit number than it will ad one space
+                //so i went with this
+                spacing = " ";      //i make it so that the variable spacing wil contain a space only if the variable kilometer is bellow 10
+            }
+
+            System.out.print("\n" + kilometer + spacing + "              " + miles); // her the tricky part, to get the thing to line up right as shown in the examble in the book
+
+            if (kilometer < 10){        //this was my solution to the spacing issue
+
+                System.out.print(" ");    // here i make it so that if the variable is a single digit number than it will ad one space
+            }
+
+
+
+        }
+        
+   }
+   
+}
